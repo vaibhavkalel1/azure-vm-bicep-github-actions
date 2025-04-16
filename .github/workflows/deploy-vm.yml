@@ -31,7 +31,7 @@ jobs:
     #     template: ./bicep/main.bicep
     #     parameters: ./bicep/main.parameters.json
 
-    Destroy Resources
+    # Destroy Resources
     - name: Delete resource group (destroys ALL resources)
       run: |
         az group delete \

@@ -1,18 +1,19 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "vmName": {
-      "value": "suselinux-vm-gh"
-    },
-    "location": {
-      "value": "eastus"
-    },
-    "adminUsername": {
-      "value": "vaibhav"
-    },
-    "adminPublicKey": {
-      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO98SAEFJFkefzX7xzFfzIEHVk1j1t1dKguo5IUTneHJh8UqRfiw4IgS7LDCn1mmwWSZVKhKFdCT9wdQsHAYJjfYGZpUZcAcCF9HvxnN01jkb2X0715Htk9OLDtdWicUX5Y4jp6WGHVRYji+ek9fGnzjIcw41TrxPw54fuRYjMlkZBj+3dBwo3eDajxScf6aYZ4btR0M95jIIiQ3oJsQsvuS7qR9hmFEEcGutsWnTdntv+jRPC0JhW5eOtohPVjDtdMUgd82CFaSoEuVF/GOPoz5IF5cAMLPwCpi+Id+HcQXxI58cx2wvTRrjzm2wfo13D7gi0m0guTODqTV+94IMn vaibhav@SandboxHost-638803932856743171"
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vmName": {
+        "value": "suselinux-vm-gh"
+      },
+      "location": {
+        "value": "eastus"
+      },
+      "adminUsername": {
+        "value": "azureuser"
+      },
+      "adminPublicKey": {
+        "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBNj+ozZzpFRdJYO0nCrCtH7bGFpucGnySIPoKbHLNtoLz9byaLGrCxP0GJzGPXNNWCr/y4JKDsxWOI+azL20Uh5ylwW3YznjzoqtsGOpyVk8pNPT4813RtzKJm5l86hWL2WXdiyOmIhQgx3hhvC/qld7HV2X4v27wBtB36ymFM6hBY/4d+YTXEL0PmyS8IjMOLXczgl+iSb4oTbW/wsIcL/aUc5lb0WvRc3xlDJuZb3yNKaR7hrBTmDizx2FaOaqO0ByCzAEg2CT7mqriTe9mV8lge0yGP9vYYf4Y0vf6GDNF4alT1iKbausEasX3as0BKSYToiWF4UwHNrK/d4P3K9RTYqckfnyJiWpAC2Y/UNZExZDjvTSaEpEVqO//CHTR+GqhOGqSevfdbmo2hS7Dff/DXoIq7qmrNgmh9dLOQgXW3IGolyEskG7lv7mQO8cP2Rhrz9r07ufmBXJgC6Jdsb83BjxJNay8gWkl6DYIHSeAQ/MLHco1NAY2alySYWDRifw+EHhJV/h/bdbQmAG6sxfCVL2MIPYYZzizjL6Eo4pp4qJtAo/xq6Rltc9Wk/tex9zVz1E02PKZMarhh+TvmURU5zjwcefZsKTV04UKszbqAP0Yh9SkT2ztPsaVZ7sMFeo1KKuucLv2Ee1N08ItCYeABUbK02Dw+PXWMmfEpw=="  // Replace this!
+      }
     }
   }
-}
+  

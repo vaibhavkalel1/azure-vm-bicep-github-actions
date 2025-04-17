@@ -54,9 +54,8 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2022-07-0
   location: location
   properties: {
     securityRules: [
-      // Inbound Rules
       {
-        name: 'Allow-SSH-In'
+        name: 'Allow-SSH'
         properties: {
           priority: 1000
           direction: 'Inbound'
@@ -64,73 +63,6 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2022-07-0
           protocol: 'Tcp'
           sourcePortRange: '*'
           destinationPortRange: '22'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-        }
-      }
-      {
-        name: 'Allow-HTTP-In'
-        properties: {
-          priority: 1001
-          direction: 'Inbound'
-          access: 'Allow'
-          protocol: 'Tcp'
-          sourcePortRange: '*'
-          destinationPortRange: '80'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-        }
-      }
-      {
-        name: 'Allow-HTTPS-In'
-        properties: {
-          priority: 1002
-          direction: 'Inbound'
-          access: 'Allow'
-          protocol: 'Tcp'
-          sourcePortRange: '*'
-          destinationPortRange: '443'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-        }
-      }
-
-      // Outbound Rules
-      {
-        name: 'Allow-SSH-Out'
-        properties: {
-          priority: 2000
-          direction: 'Outbound'
-          access: 'Allow'
-          protocol: 'Tcp'
-          sourcePortRange: '*'
-          destinationPortRange: '22'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-        }
-      }
-      {
-        name: 'Allow-HTTP-Out'
-        properties: {
-          priority: 2001
-          direction: 'Outbound'
-          access: 'Allow'
-          protocol: 'Tcp'
-          sourcePortRange: '*'
-          destinationPortRange: '80'
-          sourceAddressPrefix: '*'
-          destinationAddressPrefix: '*'
-        }
-      }
-      {
-        name: 'Allow-HTTPS-Out'
-        properties: {
-          priority: 2002
-          direction: 'Outbound'
-          access: 'Allow'
-          protocol: 'Tcp'
-          sourcePortRange: '*'
-          destinationPortRange: '443'
           sourceAddressPrefix: '*'
           destinationAddressPrefix: '*'
         }
@@ -175,21 +107,13 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2023-03-01' = {
       adminUsername: adminUsername
       linuxConfiguration: {
         disablePasswordAuthentication: true
-        ssh: {
-          publicKeys: [
-            {
-              path: '/home/${adminUsername}/.ssh/authorized_keys'
-              keyData: adminPublicKey
-            }
-          ]
-        }
       }
     }
     storageProfile: {
       imageReference: {
-        publisher: 'SUSE'
-        offer: 'sles-15-sp5'
-        sku: 'gen2'
+        publisher: 'Canonical'
+        offer: 'UbuntuServer'
+        sku: '18.04-LTS'
         version: 'latest'
       }
       osDisk: {

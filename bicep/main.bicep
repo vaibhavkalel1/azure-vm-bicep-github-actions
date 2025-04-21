@@ -107,6 +107,14 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2023-03-01' = {
       adminUsername: adminUsername
       linuxConfiguration: {
         disablePasswordAuthentication: true
+        ssh: {
+          publicKeys: [
+            {
+              path: '/home/${adminUsername}/.ssh/authorized_keys'
+              keyData: adminPublicKey
+            }
+          ]
+        }
       }
     }
     storageProfile: {

@@ -119,9 +119,9 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2023-03-01' = {
     }
     storageProfile: {
       imageReference: {
-        publisher: 'Canonical'
-        offer: 'UbuntuServer'
-        sku: '18.04-LTS'
+        publisher: 'SUSE'
+        offer: 'sles-15-sp4'
+        sku: 'gen2'
         version: 'latest'
       }
       osDisk: {

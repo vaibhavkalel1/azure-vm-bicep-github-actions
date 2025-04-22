@@ -121,7 +121,7 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2023-03-01' = {
       imageReference: {
         publisher: 'SUSE'
         offer: 'sles-15-sp4'
-        sku: 'gen2'
+        sku: 'sles-15-sp4-gen2'
         version: 'latest'
       }
       osDisk: {

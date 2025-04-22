@@ -120,8 +120,8 @@ resource virtualMachine 'Microsoft.Compute/virtualMachines@2023-03-01' = {
     storageProfile: {
       imageReference: {
         publisher: 'SUSE'
-        offer: 'sles-15-sp4'
-        sku: 'sles-15-sp4-gen2'
+        offer: 'sles-15-sp5-basic'
+        sku: 'sles-15-sp5-basic-gen1'
         version: 'latest'
       }
       osDisk: {
